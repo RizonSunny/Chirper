@@ -51,7 +51,11 @@ class ChirpController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'message' => ['required','string','min:3', 'max:255'],
+        ]);
+
+        
     }
 
     /**
